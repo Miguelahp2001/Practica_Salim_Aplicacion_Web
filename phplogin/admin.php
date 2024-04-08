@@ -71,8 +71,10 @@ if (isset($_SESSION['id'])) {
                 <td><?=$account['username']?></td>
                 <td><?=$account['email']?></td>
                 <td class="actions">
+		    <?php if ($account['id'] !=1 ): ?>	
                     <a href="update.php?id=<?=$account['id']?>" class="edit"><i class="fas fa-pen fa-xs"></i></a>
                     <a href="delete.php?id=<?=$account['id']?>" class="trash"><i class="fas fa-trash fa-xs"></i></a>
+		    <?php endif; ?>
                 </td>
             </tr>
             <?php endforeach; ?>
